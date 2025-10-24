@@ -1,0 +1,108 @@
+/* Additional Spotify-like Enhancements */
+
+/* Hover effects for songs */
+.song-row::before {
+  content: '';
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.03));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.song-row:hover::before {
+  opacity: 1;
+}
+
+/* Play button on hover for songs */
+.song-row .col-number {
+  position: relative;
+}
+
+.song-row .play-on-hover {
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.song-row:hover .col-number span {
+  opacity: 0;
+}
+
+.song-row:hover .play-on-hover {
+  opacity: 1;
+}
+
+/* Glassmorphism effect for player */
+.player::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,0.5), transparent);
+  pointer-events: none;
+}
+
+/* Smooth transitions */
+* {
+  transition-timing-function: cubic-bezier(0.3, 0, 0.4, 1);
+}
+
+/* Focus states for accessibility */
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Spotify-like gradient backgrounds */
+.content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 340px;
+  background: linear-gradient(transparent 0, rgba(0,0,0,.5) 100%);
+  pointer-events: none;
+}
+
+/* Enhanced shadow effects */
+.modal {
+  box-shadow: 
+    0 16px 24px 2px rgba(0,0,0,.14),
+    0 6px 30px 5px rgba(0,0,0,.12),
+    0 8px 10px -5px rgba(0,0,0,.2);
+}
+
+/* Better focus ring */
+.btn-primary:focus-visible {
+  outline: 2px solid var(--text-primary);
+  outline-offset: 2px;
+}
+
+/* Icon animations */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.uploading .upload-icon {
+  animation: spin 2s linear infinite;
+}
