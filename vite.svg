@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="128" fill="#1DB954"/>
+  <path fill="#fff" d="M256 128c-35.3 0-64 28.7-64 64v85.5c-9.6-5.6-20.7-9-32.5-9-35.9 0-65 29.1-65 65s29.1 65 65 65 65-29.1 65-65V235h65v-43h-65v-64c0-11.8 9.2-21 21-21h44v-43h-44zm-96.5 237c-24.3 0-44-19.7-44-44s19.7-44 44-44 44 19.7 44 44-19.7 44-44 44z"/>
+  <text x="256" y="440" font-family="Cairo, Arial" font-size="48" font-weight="bold" fill="#fff" text-anchor="middle">موسيقى</text>
+</svg>
